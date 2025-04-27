@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 
 <head>
   <style>
     body {
       font-family: Arial, sans-serif;
       margin: 20px;
+      display: flex;
+      justify-content: center;
     }
 
     input {
@@ -16,30 +18,47 @@
 
     button {
       padding: 10px 20px;
+      background-color: #0900ad;
+      color: white;
     }
 
-    #centro-da-pagina {
-      border: 1px solid black;
+    #centro {
       padding: 20px;
-      float: left;
       text-align: center;
+    }
+
+    #resultado {
+      margin-top: 15px;
+      font-weight: bold;
     }
   </style>
   <meta charset="UTF-8">
-  <title>Validação de Telefone </title>
+  <title>Document</title>
 </head>
 
 <body>
 
-  <div id="centro-da-pagina">
+  <br>
+
+  <div id="centro">
     <h1>Validação de Telefone</h1>
-    <p>Digite um número seu número de telefone:</p>
+    <p>Digite seu número de telefone:</p>
+  
+    <form id="formulario" onsubmit="event.preventDefault(); validarTelefone();">
+      <input type="text" id="telefone" placeholder="+55 (XX) 9XXXX-XXXX" required>
+      <button type="submit">Validar</button>
+    </form>
+  
+    <p id="resultado"></p>
 
-    <input type="text" id="telefone" placeholder="+55 (XX) 9XXXX-XXXX">
-    <button onclick="validarTelefone()">Validar Telefone</button>
+    <div>
+      <br><br>
+      <h3>Exemplo</h3>
+      <p><b>Regex:</b> <code>/^\+55\s\(\d{2}\)\s9\d{4}-\d{4}$/</code></p>
+      <p><b>Descrição:</b>O número deve começar com +55, um espaço o DDD entre parênteses, <br> um espaço, o dígito 9, quatro dígitos, um hífen e mais quatro dígitos.</p>
+    </div>
   </div>
-
-  <p id="resultado"></p>
+  
 
   <script>
     function validarTelefone() {
@@ -51,12 +70,11 @@
         resultado.textContent = "Telefone válido!";
         resultado.style.color = "green";
       } else {
-        resultado.textContent = "Telefone inválido! Siga o padrão determinado +55 (XX) 9XXXX-XXXX";
+        resultado.textContent = "Telefone inválido! Siga o formato.";
         resultado.style.color = "red";
       }
     }
   </script>
-
 </body>
 
 </html>
