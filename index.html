@@ -41,7 +41,7 @@
   <br>
 
   <div id="centro">
-    <h1>Validação de Telefone</h1>
+    <h1>Verificação de telefone</h1>
     <p>Digite seu número de telefone:</p>
   
     <form id="formulario" onsubmit="event.preventDefault(); validarTelefone();">
@@ -63,7 +63,7 @@
   <script>
     function validarTelefone() {
       const telefone = document.getElementById('telefone').value;
-      const regex = /^\+55\s\(\d{2}\)\s9\d{4}-\d{4}$/;
+      const regex = /^\+55\s\(\d{2}\s\)9\d{4}-\d{4}$/;
       const resultado = document.getElementById('resultado');
 
       if (regex.test(telefone)) {
