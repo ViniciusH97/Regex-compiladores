@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    input {
+      width: 250px;
+      padding: 10px;
+      margin-right: 10px;
+    }
+
+    button {
+      padding: 10px 20px;
+    }
+
+    #centro-da-pagina {
+      border: 1px solid black;
+      padding: 20px;
+      float: left;
+      text-align: center;
+    }
+  </style>
+  <meta charset="UTF-8">
+  <title>Validação de Telefone </title>
+</head>
+
+<body>
+
+  <div id="centro-da-pagina">
+    <h1>Validação de Telefone</h1>
+    <p>Digite um número seu número de telefone:</p>
+
+    <input type="text" id="telefone" placeholder="+55 (XX) 9XXXX-XXXX">
+    <button onclick="validarTelefone()">Validar Telefone</button>
+  </div>
+
+  <p id="resultado"></p>
+
+  <script>
+    function validarTelefone() {
+      const telefone = document.getElementById('telefone').value;
+      const regex = /^\+55\s\(\d{2}\)\s9\d{4}-\d{4}$/;
+      const resultado = document.getElementById('resultado');
+
+      if (regex.test(telefone)) {
+        resultado.textContent = "Telefone válido!";
+        resultado.style.color = "green";
+      } else {
+        resultado.textContent = "Telefone inválido! Exemplo correto: +55 (11) 91234-5678";
+        resultado.style.color = "red";
+      }
+    }
+  </script>
+
+</body>
+
+</html>
