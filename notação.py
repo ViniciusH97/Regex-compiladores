@@ -28,4 +28,4 @@ def infixa_para_posfixa(expressao):
 
 expressao = "(a + b) * c "
 resultado = infixa_para_posfixa(expressao)
-print(resultado)
+print("Expressão Pós-fixa:", resultado)
