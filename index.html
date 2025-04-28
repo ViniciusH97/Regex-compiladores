@@ -63,7 +63,7 @@
   <script>
     function validarTelefone() {
       const telefone = document.getElementById('telefone').value;
-      const regex = /^\+55\s\(\d{2}\s\)9\d{4}-\d{4}$/;
+      const regex = /^\+55\s\(\d{2}\)\s9\d{4}-\d{4}$/;
       const resultado = document.getElementById('resultado');
 
       if (regex.test(telefone)) {
