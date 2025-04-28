@@ -31,6 +31,6 @@ def infixa_para_posfixa(expressao):
 
     return ' '.join(saida)
 
-expressao = "a + b * c - (d + e * f) * g"
+expressao = "(a + b) * c "
 resultado = infixa_para_posfixa(expressao)
 print(resultado)   
