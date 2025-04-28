@@ -2,24 +2,22 @@ import re
 
 def infixa_para_posfixa(expressao):
     
-    precedencia = {'+': 1, '-': 1, '*': 2, '/': 2, '(': 0} 
+    precedencia = {'+': 1, '-': 1, '*': 2, '/': 2, '(': 0} # Dicionário
     
-    pilha = []  
-    saida = []
+    pilha = []   
+    saida = []  
 
-    # Divide a expressão em tokens
 
-    tokens = re.findall(r'[a-zA-Z]+|[()+\-*/]', expressao) # Regex para capturar operandos e operadores
-
+    tokens = re.findall(r'[a-zA-Z]+|[()+\-*/]', expressao) 
     for token in tokens:
-        if token.isalpha(): # Se for operando, adiciona à saída
+        if token.isalpha(): 
             saida.append(token)
 
-        elif token == '(': # Se for '(', empilha
+        elif token == '(': 
             pilha.append(token)
 
 
-        elif token == ')': # Se for ')', desempilha até encontrar '('
+        elif token == ')': 
             while pilha and pilha[-1] != '(':
                 saida.append(pilha.pop())
             pilha.pop()           
@@ -34,7 +32,6 @@ def infixa_para_posfixa(expressao):
 
     return ' '.join(saida)
 
-# Testando a função com a expressão fornecida
 expressao = "a + b * c - (d + e * f) * g"
 resultado = infixa_para_posfixa(expressao)
 print(resultado)   
