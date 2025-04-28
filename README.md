@@ -19,9 +19,10 @@ Uma Regex funciona comparando uma string de texto com um padrão predefinido. Ve
 -  `.`  : representa qualquer caractere.
 -  `\` : é usado para "escapar" caracteres especiais.
 
-## Descrição do que foi feito
+## Expressão Regular para Reconhecimento de Número de Telefone no Formato Brasileiro
+### Descrição do que foi feito
 
-Foi criada uma página web em HTML com um campo de entrada para digitar um número de telefone no padrão brasileiro. Para validar o telefone, foi utilizada a seguinte expressão regular:
+Neste trabalho desenvolvemos uma página web que realiza uma verificação de número de telefone no formato brasileiro, ou seja, ele deve respeitar o código de discagem +55, o DDD (Discagem Direta à Distância) com o uso dos parênteses, os espaços, o 9 obrigatório para celular seguido dos oitos dígitos separados por um hífen . Então, o código deve validar o formato do núemro, retornando se é válido ou inválido, essa verificação foi realizada utilizando o seguinte Regex (expressão regular):
 
 Regex: `/^\+55\s\(\d{2}\)\s9\d{4}-\d{4}$/`
 
@@ -37,8 +38,13 @@ Regex: `/^\+55\s\(\d{2}\)\s9\d{4}-\d{4}$/`
 - `\d{4}`= Quatro dígitos.
 - `$` = Fim da String.
 
-O usuário digita o número, clica no botão e o sistema informa se o formato é válido ou inválido, de forma simples e didática.
+### O que a função validartelefone faz?
+
+1. Pega o valor digitado pelo usuário.
+2. Cria a expressão regular que define o formato aceito.
+3. Testa se o número e bate com o padrão.
+4. Exibe uma mensagem em verde ou vermelho dependendo do resultado.
 
 Exemplo de número válido: `+55 (11) 91234-5678`
 
-Essa implementação mostra, na prática, como uma Regex pode ser usada para validar formatos específicos de texto, facilitando o tratamento de dados em aplicações web e sistemas em geral.
+Exemplos de números inválidos: `+55 (35)99135-3452`; `+55 35 94721-2345`; `(11) 991064-3453`.
