@@ -44,7 +44,7 @@ def infixa_para_posfixa_passo_a_passo(expressao):
             else:
                 print("    Erro: parêntese não balanceado!")
                     
-        else:  # Operador
+        else:  
             print(f"  '{token}' é um operador")
             while pilha and pilha[-1] != '(' and precedencia.get(pilha[-1], 0) >= precedencia.get(token, 0):
                 operador = pilha.pop()
