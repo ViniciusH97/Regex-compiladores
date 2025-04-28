@@ -13,7 +13,7 @@ Uma Regex funciona comparando uma string de texto com um padrão predefinido. Ve
 3. Verificar um CPF: `/^\d{3}\.\d{3}\.\d{3}-\d{2}$/`
 
 ## Cada símbolo tem um significado:
-
+- `\w` : qualquer letra maiúscula ou minúscula, digitos numéricos (0-9) e underline `_`.
 - `\d` : representa um dígito (0-9).
 -  `+` : significa "uma ou mais ocorrências".
 -  `.`  : representa qualquer caractere.
