@@ -9,17 +9,17 @@ def infixa_para_posfixa(expressao):
 
     # Divide a expressão em tokens
 
-    tokens = re.findall(r'[a-zA-Z]+|[()+\-*/]', expressao)  # Regex para capturar operandos e operadores
+    tokens = re.findall(r'[a-zA-Z]+|[()+\-*/]', expressao) # Regex para capturar operandos e operadores
 
     for token in tokens:
-        if token.isalpha():             # Se for operando, adiciona à saída
+        if token.isalpha(): # Se for operando, adiciona à saída
             saida.append(token)
 
-        elif token == '(':               # Se for '(', empilha
+        elif token == '(': # Se for '(', empilha
             pilha.append(token)
 
 
-        elif token == ')':                             # Se for ')', desempilha até encontrar '('
+        elif token == ')': # Se for ')', desempilha até encontrar '('
             while pilha and pilha[-1] != '(':
                 saida.append(pilha.pop())
             pilha.pop()           
