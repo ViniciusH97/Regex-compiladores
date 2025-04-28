@@ -7,7 +7,6 @@ def infixa_para_posfixa_passo_a_passo(expressao):
     pilha = []   
     saida = []  
     
-    print("\nIniciando conversão de notação infixa para pós-fixa")
     print(f"Expressão: {expressao}")
     
     input("Pressione Enter para começar")
