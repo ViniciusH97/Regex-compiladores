@@ -27,15 +27,15 @@ Regex: `/^\+55\s\(\d{2}\)\s9\d{4}-\d{4}$/`
 
 **Explicando a regex:**
 
- `^` = Início da string.
- `\+55` = Texto literal `+55`.
- `\s` = Um espaço.
- `\(\d{2}\)` = Dois dígitos dentro de parênteses (DDD).
- `\s` = Mais um espaço.
- `9\d{4}` = O dígito 9 seguido de quatro dígitos.
- `-` = Um traço.
- `\d{4}`= Quatro dígitos.
- `$` = Fim da String.
+- `^` = Início da string.
+- `\+55` = Texto literal `+55`.
+- `\s` = Um espaço.
+- `\(\d{2}\)` = Dois dígitos dentro de parênteses (DDD).
+- `\s` = Mais um espaço.
+- `9\d{4}` = O dígito 9 seguido de quatro dígitos.
+- `-` = Um traço.
+- `\d{4}`= Quatro dígitos.
+- `$` = Fim da String.
 
 O usuário digita o número, clica no botão e o sistema informa se o formato é válido ou inválido, de forma simples e didática.
 
