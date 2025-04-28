@@ -2,7 +2,7 @@ import re
 
 def infixa_para_posfixa(expressao):
     
-    precedencia = {'+': 1, '-': 1, '*': 2, '/': 2, '(': 0} # Dicionário
+    precedencia = {'+': 1, '-': 1, '*': 2, '/': 2, '(': 0}
     
     pilha = []   
     saida = []  
@@ -15,7 +15,6 @@ def infixa_para_posfixa(expressao):
 
         elif token == '(': 
             pilha.append(token)
-
 
         elif token == ')': 
             while pilha and pilha[-1] != '(':
