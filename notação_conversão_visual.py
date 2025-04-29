@@ -78,8 +78,8 @@ def infixa_para_posfixa_passo_a_passo(expressao):
 def main():
     
     while True:
-        expressao = input("\nDigite uma expressão em notação infixa digite ou sair para encerrar: ")
-        
+        expressao = input("\nDigite uma expressão em notação infixa ou digite sair para encerrar: ")
+        os.system('clear')
         if expressao.lower() == 'sair':
             break
             
