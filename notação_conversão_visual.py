@@ -79,8 +79,9 @@ def main():
     
     while True:
         expressao = input("\nDigite uma expressão em notação infixa ou digite sair para encerrar: ")
+        expressao = expressao.lower()
         os.system('clear')
-        if expressao.lower() == 'sair':
+        if expressao == 'sair':
             break
             
         if not expressao.strip():
