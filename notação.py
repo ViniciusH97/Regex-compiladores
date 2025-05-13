@@ -26,6 +26,9 @@ def infixa_para_posfixa(expressao):
         saida.append(pilha.pop())
     return ' '.join(saida)
 
-expressao = "(a + b) * c "
+print("--------------------------")
+print("Notação Infixa e Pós-Fixa")
+print("--------------------------\n")
+expressao=(input("Digite a expressão infixa: "))
 resultado = infixa_para_posfixa(expressao)
 print("Expressão Pós-fixa:", resultado)
